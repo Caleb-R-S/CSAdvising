@@ -12,3 +12,165 @@
 
                   <p class="s2">This course introduces the concepts of cyber security, vulnerabilities, and the mechanisms to secure a system. The course covers the basics of a variety of topics including cryptography, web security, authentication, network security, system security, and software security, where students gain a primary understanding of the security vulnerabilities and protection techniques.</p>
 
+
+
+List of information for careers
+
+                <h2 class="s3"><strong>Elective Courses</strong></h2>
+
+                  <p class="s3">&nbsp;</p>
+
+
+                  <h1>Career Electives</h1>
+
+                  <p>The following are elective course recommendations considering various career paths for those earning a degree in Computer Science.</p>
+
+                  <div class="col-xs-12 col-sm-6">
+
+                     <div>
+
+                        <h2>Data Science Analyst</h2>
+
+                        <ul>
+
+                           <li>CS 3430 – Scientific Computing with Python</li>
+
+                           <li>CS 4320 – Information Storage and Retrieval</li>
+
+                           <li>CS 5665 – Introduction to Data Science</li>
+
+                           <li>CS 5830 – Data Science Incubator</li>
+
+                        </ul>
+
+                     </div>
+
+                     <div>
+
+                        <h2>Computer Vision/Machine Learning Developer</h2>
+
+                        <ul>
+
+                           <li>CS 5000 – Theory of Computability</li>
+
+                           <li>CS 5600 – Intelligent Systems</li>
+
+                           <li>CS 5665 – Introduction to Data Science</li>
+
+                           <li>CS 5680 – Computer Vision: Foundations &amp; Applications</li>
+
+                        </ul>
+
+                     </div>
+
+                     <div>
+
+                        <h2>Game Developer</h2>
+
+                        <ul>
+
+                           <li>CS 3460 – C++</li>
+
+                           <li>CS 5400 – Computer Graphics I</li>
+
+                           <li>CS 5410 – Game Development</li>
+
+                        </ul>
+
+                     </div>
+
+                     <div>
+
+                        <h2>Mobile Application Developer</h2>
+
+                        <ul>
+
+                           <li>CS 3200 – Mobile Application Development</li>
+
+                           <li>CS 5700 – Object-Oriented Software Development</li>
+
+                           <li>CS 5800 – Introduction to Database Systems</li>
+
+                        </ul>
+
+                     </div>
+
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6">
+
+                     <div>
+
+                        <h2>Network Administrator</h2>
+
+                        <ul>
+
+                           <li>CS 5200 – Introduction to Distributed Systems</li>
+
+                           <li>CS 5460 – Computer Security I</li>
+
+                           <li>CS 5500 – Parallel Programming</li>
+
+                        </ul>
+
+                     </div>
+
+                     <div>
+
+                        <h2>Security Analyst</h2>
+
+                        <ul>
+
+                           <li>CS 3460 – C++</li>
+
+                           <li>CS 4700 – Programming Languages</li>
+
+                           <li>CS 5460 – Computer Security I</li>
+
+                           <li>CS 6460 – Computer Security II</li>
+
+                        </ul>
+
+                     </div>
+
+                     <div>
+
+                        <h2>Software Engineer</h2>
+
+                        <ul>
+
+                           <li>CS 5000 – Theory of Computability</li>
+
+                           <li>CS 5050 – Advanced Algorithms</li>
+
+                           <li>CS 5110 – MultiAgent Systems</li>
+
+                           <li>CS 5200 – Introduction to Distributed Systems</li>
+
+                           <li>CS 5300 – Compiler Construction</li>
+
+                           <li>CS 5700 – Object-Oriented Software Development</li>
+
+                           <li>CS 5800 – Introduction to Database Systems</li>
+
+                        </ul>
+
+                     </div>
+
+                     <div>
+
+                        <h2>Web Developer</h2>
+
+                        <ul>
+
+                           <li>CS 5200 – Introduction to Distributed Systems</li>
+
+                           <li>CS 5700 – Object-Oriented Software Development</li>
+
+                           <li>CS 5800 – Introduction to Database Systems</li>
+
+                        </ul>
+
+                     </div>
+
+                  </div>

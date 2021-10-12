@@ -1,3 +1,5 @@
+Oct 12 - Completion of version one of lower level course descriptions
+
 Oct 11 - More work on Lower level course descriptions
 
 Oct 7 - Changes to file organization. CSAdvisingOld still has the left menu.
