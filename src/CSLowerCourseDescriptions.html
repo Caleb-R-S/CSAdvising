@@ -324,7 +324,7 @@
 
                   <h2 style="text-align: left;"><strong>Pre-Program Computer Science Courses</strong></h2>
 
-                  <h1>1000 Level Courses</h1>
+                  <h1 id="1000">1000 Level Courses</h1>
 
                   
                   <table> 
@@ -356,6 +356,80 @@
     
 
                   <p>&nbsp;</p>
+                  
+
+                  <div class="popup">
+                     <button class="popupbtn">Course <br> Levels</button>
+                     <div class="popup-content">
+                        <a href="#1000">1000</a>
+                        <a href="#2000">2000</a>
+                        <a href="#3000">3000</a>
+                        <a href="#4000">4000</a>
+                     </div>
+                  </div>
+
+                  <style>
+                     .popupbtn {
+                        background-color: #252F40;
+                        color: white;
+                        padding: 10px;
+                        border:none;
+                        border-radius: 50%;
+                     }
+
+                     .popup {
+                        position: fixed;
+                        bottom: 5rem;
+                        right: 5rem;
+                     }
+
+                     .popup-content {
+                        visibility: hidden;
+                        position: absolute;
+                        color: 838898;
+                        min-width: 100%;
+                        
+                     }
+
+                     .popup-content a {
+                        color: white;
+                        display: block;
+                        opacity: 0;
+                        transition-property: all;
+
+                     }
+
+                     .popup:hover .popup-content {
+                        display: block;
+                        bottom: 100%;
+                        visibility: visible;
+                     }
+
+                     .popup:hover .popup-content a{
+                        background-color: #838898;
+                        border-radius: 50%;
+                        text-align: center;
+                        padding: 20%;
+                        margin: 5px;
+                        transition-duration: 300ms;
+                        opacity: 1;
+                                               
+                        
+                     }
+                     .popup:hover::after .popup-content{
+                        visibility: hidden;
+                     }
+
+                     .popup:hover::after .popup-content a{
+                        opacity: 0;
+                        visibility: hidden;             
+                        
+                     }
+
+
+                  </style>
+
+
 
                   <table> 
                      <tr>
@@ -494,7 +568,7 @@
 
                   <p>&nbsp;</p>
 
-                  <h1>2000 Level Courses</h1>
+                  <h1 id="2000">2000 Level Courses</h1>
 
                   <table> 
                      <tr>
@@ -722,6 +796,8 @@
 
                   <p>&nbsp;</p>
 
+                  <h1 id="3000">3000 Level Courses</h1>
+
                   <table> 
                      <tr>
                          <td class="td_1" colspan="2">
@@ -948,6 +1024,8 @@
 
                   <p>&nbsp;</p>
                   
+                  <h1 id="4000">4000 Level Courses</h1>
+
                   <table> 
                      <tr>
                          <td class="td_1" colspan="2">

@@ -174,3 +174,128 @@ List of information for careers
                      </div>
 
                   </div>
+
+
+
+
+
+                  <style>
+                     .menu {
+                        --size: 2.5rem;
+                        --padding: 1rem;
+                        --radius: 6rem;
+                        --bg-color: #2F3A50
+                        --fg-color: rgba(0, 0, 0, 0.7)
+
+                        position: fixed;
+                        bottom: var(--padding);
+                        right: var(--padding);
+                     }
+
+                     .menu > * {
+                        border-radius: 50%;
+                        text-decoration: none;
+                        background-color: #2F3A50;
+                        display: grid;
+                     }
+
+                     .menu > .action {
+                        width: var(--size);
+                        height: var(--size);
+                        background: var(--bg-color);
+                        color: var();
+                     }
+                  </style>
+
+                  <div href="#" class="buttonContainer">
+                     
+                     <a class="trigger" href="#">Course <br> Levels</a>
+                  </div>
+                  <div class="courseLevels" id="courses">
+                        <a class="action" href="#">1000</a>
+                        <a class="action" href="#">2000</a>
+                        <a class="action" href="#">3000</a>
+                        <a class="action" href="#">4000</a>
+                  </div>
+                  
+                  <style>
+                     .buttonContainer {
+                        display: grid;
+                        position: fixed;
+                        bottom: 7rem;
+                        right: 7rem;
+                        height: 50%;
+                     }
+
+                     .trigger {
+                        background-color: #838898;
+                        text-decoration-color: white;
+                        width: 70px;
+                        height: 70px;
+                        text-align: center;
+                        border-radius: 50%;
+                        padding-top: 25%;
+                        position: absolute;
+                        bottom: 0;
+                     }
+
+                     .action {
+                        display: none;
+                     }
+
+
+
+                     .buttonContainer:hover + #courses > .action {
+                        display: grid;
+                        text-align: center;
+                        position: fixed;
+                        bottom: 20rem;
+                        right: 7rem;
+                     }
+                  </style>
+
+
+
+                  <table class="courses"> 
+                     <tr class="hidden">
+                        <td><a href="#">1000</a></td>
+                     </tr>
+                     <tr class="hidden">
+                        <td><a href="#">2000</a></td>
+                     </tr>
+                     <tr class="hidden">
+                        <td><a href="#">3000</a></td>
+                     </tr>
+                     <tr class="hidden">
+                        <td><a href="#">4000</a></td>
+                     </tr>
+                     <tr class="shown">
+                        <th><a href="#">Course <br> Levels</a></th>
+                     </tr>
+                  </table>
+
+                  <style>
+                     .courses {
+                        position: fixed;
+                        width: 10%;
+                        bottom: 5rem;
+                        right: 5rem;
+                        border: none;
+                        box-shadow: none;
+                        border-radius: 15%;
+                     }
+
+                     .hidden{
+                        display: none;
+                     }
+
+                     .shown > *{
+                        text-align: center;
+                        border-radius: 15%;
+                        background-color: #252F40;
+                     }
+
+                     .courses:hover .hidden {
+                        display: table-row;
+                     }
+                  </style>
