@@ -1,3 +1,5 @@
+Oct 27 - Completion of version two of lower level course descriptions
+
 Oct 12 - Completion of version one of lower level course descriptions
 
 Oct 11 - More work on Lower level course descriptions
