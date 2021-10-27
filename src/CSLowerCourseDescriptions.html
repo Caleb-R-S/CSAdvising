@@ -361,10 +361,10 @@
                   <div class="popup">
                      <button class="popupbtn">Course <br> Levels</button>
                      <div class="popup-content">
-                        <a href="#1000">1000</a>
-                        <a href="#2000">2000</a>
-                        <a href="#3000">3000</a>
                         <a href="#4000">4000</a>
+                        <a href="#3000">3000</a>
+                        <a href="#2000">2000</a>
+                        <a href="#1000">1000</a>
                      </div>
                   </div>
 
@@ -375,6 +375,7 @@
                         padding: 10px;
                         border:none;
                         border-radius: 50%;
+                        box-shadow: 0px 3px 10px 0px rgb(0, 0, 0);
                      }
 
                      .popup {
@@ -395,8 +396,8 @@
                         color: white;
                         display: block;
                         opacity: 0;
-                        transition-property: all;
-
+                        transition-property: opacity, padding;
+                        box-shadow: 0px 3px 10px 0px rgb(0, 0, 0);
                      }
 
                      .popup:hover .popup-content {
@@ -411,7 +412,8 @@
                         text-align: center;
                         padding: 20%;
                         margin: 5px;
-                        transition-duration: 300ms;
+                        transition-duration: 500ms; 
+                        /* PLAY WITH ANIMATIONS!! */
                         opacity: 1;
                                                
                         
