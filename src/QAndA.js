@@ -18,10 +18,21 @@ const questionFactory = (question, answer, advising, financialAid, registration,
 
 }
 
-const advisorAppointments = questionFactory("How do I make an appointment with my Advisor?", "The Computer Science Department Advising Office is a students primary source for information and assistance regarding: academic advising, registration, admission to the Computer Science Department, scholarships, general education and transfer credits. \n Office hours are Monday-Friday, 9:00 a.m. to 4:00 p.m. \n For an appointment (if you are a Student with an A#) press the 'Schedule an Appointment' button on the lefthand side. Otherwise call 435-797-0527, or e-mail cs.advising@usu.edu", true, false, false, false, false, true, true, true, false)
 
+
+const advisorAppointments = questionFactory("How do I make an appointment with my Advisor?", "The Computer Science Department Advising Office is a students primary source for information and assistance regarding: academic advising, registration, admission to the Computer Science Department, scholarships, general education and transfer credits. \n Office hours are Monday-Friday, 9:00 a.m. to 4:00 p.m. \n For an appointment (if you are a Student with an A#) press the 'Schedule an Appointment' button on the lefthand side. Otherwise call 435-797-0527, or e-mail cs.advising@usu.edu", true, false, false, false, false, true, true, true, false)
+const arrayOfQuestions = [];
+arrayOfQuestions.push(advisorAppointments);
 
 
 function generateHTML (question) {
-    
+    document.getElementById("response").array.forEach(element => {
+        document.getElementById("response").removeChild(element);
+    });
+
+    arrayOfQuestions.forEach(question => {
+        document.getElementById("response").appendChild("<h3>" + question.question + "</h3>")
+    });
+
+
 }
