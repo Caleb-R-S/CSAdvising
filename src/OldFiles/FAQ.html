@@ -1,151 +1,202 @@
 <html lang="en">
-    <body>>
-                <h1>Frequently Asked Questions</h1>
+    <body>
+        <h1>Frequently Asked Questions</h1>
+        
+
+        <!-- START HERE -->
+            <div>
+                <form>
+                    <section class="type-of-student">
+                        <label for="courseLevel" class="question-label">Are you an undergrad or graduate student?</label>
+                        <select name="CourseLevel" id="courseLevel" style="color: black;">
+                            <option value="undergraduate">Undergraduate</option>
+                            <option value="graduate">Graduate</option>
+                        </select>
+                    </section>
+            
+                    <br>
+
+                    <section class="type-of-question">
+                        <label for="checkboxes" class="question-label">What are your questions about?</label>
+                        <ul class="checkboxes" id="checkboxes">
+                            <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="advising" value="advising"><label for="advising">Advising</label></li>
+
+                            <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="financial-aid" value="financial-aid"><label for="financial-aid">Financial Aid</label></li>
+
+                            <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="registration" value="registration"><label for="registration">Registration</label></li>
+
+                            <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="graduation" value="graduation"><label for="graduation">Graduation</label></li>
+
+                            <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="research" value="research"><label for="research">Research</label></li>
+
+                            <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="application" value="application"><label for="application">Application</label></li>
+
+                            <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="acceptance" value="acceptance"><label for="acceptance">Acceptance</label></li>
+
+                            <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="internship" value="internship"><label for="internship">Internships</label></li>
+
+                            <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="other" value="other"><label for="other">Other</label></li>
+                        </ul>
+                    </section>
+
+                </form>
+                <button id="submit" value="generateHTML">Find Questions</button>
+
+                <div id="response" class="response">
+                    <ul class="all-responses" id="all-responses">
+
+                    </ul>
+                </div>
                 
-
-                <!-- START HERE -->
-                    <div>
-                        <form>
-                            <section class="type-of-student">
-                                <label for="courseLevel" class="question-label">Are you an undergrad or graduate student?</label>
-                                <select name="CourseLevel" id="courseLevel" style="color: black;">
-                                    <option value="undergraduate">Undergraduate</option>
-                                    <option value="graduate">Graduate</option>
-                                </select>
-                            </section>
+                <script>
                     
-                            <br>
+                    const questionFactory = (isDisplayed, question, answer, courseLevel, advising, financialAid, registration, graduation, research, application, acceptance, internship, other) => {
+                        return {
+                            isDisplayed: isDisplayed,
+                            question: question,
+                            answer: answer,
+                            courseLevel: courseLevel,
+                            attributes: {
+                                "advising": advising,
+                                "financial-aid": financialAid,
+                                "registration": registration,
+                                "graduation": graduation,
+                                "research": research,
+                                "application": application,
+                                "acceptance": acceptance,
+                                "internship": internship,
+                                "other": other
+                            }
+                        }
+                    }
 
-                            <section class="type-of-question">
-                                <label for="checkboxes" class="question-label">What are your questions about?</label>
-                                <ul class="checkboxes" id="checkboxes">
-                                    <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="advising" value="advising"><label for="advising">Advising</label></li>
-    
-                                    <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="financial-aid" value="financial-aid"><label for="financial-aid">Financial Aid</label></li>
-    
-                                    <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="registration" value="registration"><label for="registration">Registration</label></li>
-    
-                                    <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="graduation" value="graduation"><label for="graduation">Graduation</label></li>
-    
-                                    <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="research" value="research"><label for="research">Research</label></li>
-    
-                                    <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="application" value="application"><label for="application">Application</label></li>
-    
-                                    <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="acceptance" value="acceptance"><label for="acceptance">Acceptance</label></li>
-    
-                                    <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="internship" value="internship"><label for="internship">Internships</label></li>
-    
-                                    <li class="checkbox-item"><input type="checkbox" name="type-of-student" id="other" value="other"><label for="other">Other</label></li>
-                                </ul>
-                            </section>
 
-                        </form>
-                        <button id="submit" value="generateHTML">Find Questions</button>
 
-                        <div id="response" class="response">
-                           <ul id="all_responses">
+                    const advisorAppointments = questionFactory(false, "How do I make an appointment with my Advisor?", "The Computer Science Department Advising Office is a students primary source for information and assistance regarding: academic advising, registration, admission to the Computer Science Department, scholarships, general education and transfer credits. \n Office hours are Monday-Friday, 9:00 a.m. to 4:00 p.m. \n For an appointment (if you are a Student with an A#) press the 'Schedule an Appointment' button on the lefthand side. Otherwise call 435-797-0527, or e-mail cs.advising@usu.edu", "undergraduate", true, false, false, false, false, true, true, false, true);
+                    const catalogYear = questionFactory(false, "What is a Catalog Year, and how do I find my Catalog Year?", "Students are answerable to the General Catalog in force when they enter the CS Pre-Professional Program.  To find your catalog year, you can ask your advisor, or you can look at your Degree Works.", "undergraduate", true, false, true, true, false, true, true, false, true);
+                    const arrayOfQuestions = [];
+                    arrayOfQuestions.push(advisorAppointments);
+                    arrayOfQuestions.push(catalogYear);
 
-                           </ul>
-                        </div>
+                    function generateHTML (question) {
+                        const questionTyes = ["advising", "financial-aid", "registration", "graduation", "research", "application", "acceptance", "internship", "other"];
                         
-                        <script>
-                            
-                            const questionFactory = (question, answer, courseLevel, advising, financialAid, registration, graduation, research, application, acceptance, internship, other) => {
-                                return {
-                                    question: question,
-                                    answer: answer,
-                                    courseLevel: courseLevel,
-                                    attributes: {
-                                        "advising": advising,
-                                        "financial-aid": financialAid,
-                                        "registration": registration,
-                                        "graduation": graduation,
-                                        "research": research,
-                                        "application": application,
-                                        "acceptance": acceptance,
-                                        "internship": internship,
-                                        "other": other
+                        
+                        var currentQuestions = document.getElementById("all-responses");
+                        currentQuestions.innerHTML = "";
+                        
+
+                        var questionNumber = 1;
+                        var subArray = arrayOfQuestions;
+
+                        subArray.forEach(question => {
+                            question.isDisplayed = false;
+                        })
+
+                        subArray.forEach(question => {
+                            questionTyes.forEach (type => {
+                                if (!question.isDisplayed) {
+                                    if (document.getElementById(type).checked && question.attributes[type]) {
+                                        
+                                        var questionNode = document.createElement('LI');
+                                        var questionText = document.createTextNode(question.question);
+                                        questionNode.appendChild(questionText);
+                                        questionNode.className = "question-block";
+
+                                        var answerNode = document.createElement("LI")
+                                        var answerText = document.createTextNode(question.answer);
+                                        answerNode.appendChild(answerText);
+                                        answerNode.className = "answer-block";
+
+                                        document.getElementById("all-responses").appendChild(questionNode);
+                                        document.getElementById("all-responses").appendChild(answerNode);
+                                        questionNumber ++;
+                                        question.isDisplayed = true;
                                     }
                                 }
-                            }
-
-
-
-                            const advisorAppointments = questionFactory("How do I make an appointment with my Advisor?", "The Computer Science Department Advising Office is a students primary source for information and assistance regarding: academic advising, registration, admission to the Computer Science Department, scholarships, general education and transfer credits. \n Office hours are Monday-Friday, 9:00 a.m. to 4:00 p.m. \n For an appointment (if you are a Student with an A#) press the 'Schedule an Appointment' button on the lefthand side. Otherwise call 435-797-0527, or e-mail cs.advising@usu.edu", "undergraduate", true, false, false, false, false, true, true, false, true)
-                            const arrayOfQuestions = [];
-                            arrayOfQuestions.push(advisorAppointments);
-
-
-                            function generateHTML (question) {
-                                const questionTyes = ["advising", "financial-aid", "registration", "graduation", "research", "application", "acceptance", "internship", "other"];
-                                
-                                
-                                var currentQuestions = document.getElementById("all_responses");
-                                currentQuestions.innerHTML = "";
-
-                                arrayOfQuestions.forEach(question => {
-                                    questionTyes.forEach (type => {
-                                        if (document.getElementById(type).checked && question.attributes[type]) {
-                                            var node = document.createElement('LI');
-                                            var textnode = document.createTextNode(question.question);
-                                            node.appendChild(textnode);
-                                            document.getElementById("all_responses").appendChild(node);
-                                        }
-                                    });
-                                    
-                                });
-                            }
-
-                            document.getElementById("submit").addEventListener("click", generateHTML);
-                        </script>
-
-                        <style>
-                            form {
-                                width: 50%;
-                                background-color: #E1EAF9;
-                                padding: 2rem;
-                                border-radius: 5%;
-                                color: #384660;
-                                
-                            }
-
-                            form .submission {
-                                text-align: center;
-                            }
-                            .question-label {
-                                font-weight: bold;
-                            }
+                            });
                             
-                            li.checkbox-item {
-                                display: inline-block;
-                                width: 15rem;
-                            }
-                            
-                            li label {
-                                padding-left: 1rem;
-                                padding-right: 1rem;
-                                margin-right: 1rem;
-                                margin-left: 1rem;
-                                border-radius: 10%;
-                            }
+                        });
+                    }
 
-                            li.checkbox-item :hover {
-                                background-color: #384660;
-                                color: #E1EAF9;
-                                border-radius: 5%;
-                            }
+                    document.getElementById("submit").addEventListener("click", generateHTML);
+                </script>
 
-                            #submit {
-                                width: 50%;
-                                position: relative;
-                            }
-                        </style>
-                    </div>
+                <style>
+                    form {
+                        width: 50%;
+                        background-color: #E1EAF9;
+                        padding: 2rem;
+                        border-radius: 5%;
+                        color: #384660;
+                        
+                    }
 
-                <!-- END HERE -->
-             </div>
-          </div>
-       </div>
-    </div>
- 
-</div></body></html>
+                    form .submission {
+                        text-align: center;
+                    }
+                    .question-label {
+                        font-weight: bold;
+                    }
+                    
+                    li.checkbox-item {
+                        display: inline-block;
+                        width: 15rem;
+                    }
+                    
+                    li label {
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                        margin-right: 1rem;
+                        margin-left: 1rem;
+                        border-radius: 10%;
+                    }
+
+                    li.checkbox-item :hover {
+                        background-color: #384660;
+                        color: #E1EAF9;
+                        border-radius: 5%;
+                    }
+
+                    #submit {
+                        width: 50%;
+                        position: relative;
+                    }
+
+                    .all-responses .question-block{
+                        border: black;
+                        color: white;
+                        border-style: solid;
+                        border-width: 2px;
+                        list-style: none;
+                        text-align: center;
+                        font-size: 20px;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius:5px;
+                        background-color: #495057;
+                    }
+
+
+                    .all-responses .answer-block {
+                        color: black;
+                        border-style: solid;
+                        border-width: 2px;
+                        border-top: none;
+                        text-align: left;
+                        list-style: none;
+                        padding-left: 2%;
+                        padding-right: 2%;
+                        padding-top: 1%;
+                        padding-bottom: 1%;
+                        border-bottom-left-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        background-color: #DEE2E6;
+                        margin-bottom: 1%;
+                    }
+                </style>
+            </div>
+
+        <!-- END HERE -->
+    
+    </body>
+</html>
