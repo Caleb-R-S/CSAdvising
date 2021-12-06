@@ -113,15 +113,17 @@
                     }
 
                     function changeColor() {
+                        debugger;
                         arrayOfQuestions.forEach(question => {
-                            questionTypes.forEach (type => {
+                            questionTypes.every (type => {
                                     if (document.getElementById(type).checked && question.attributes[type]) {
                                         document.getElementById(question.questionId).style.backgroundColor = "#588038";
                                         document.getElementById(question.questionId + "-a").style.backgroundColor = "#9DC696";                                        
-                                        
+                                        return false;
                                     } else {
                                         document.getElementById(question.questionId).style.backgroundColor = "#2F3A50";
-                                        document.getElementById(question.questionId + "-a").style.backgroundColor = "#DEE2E6";   
+                                        document.getElementById(question.questionId + "-a").style.backgroundColor = "#DEE2E6";
+                                        return true;   
                                     }
                             });
                         });
