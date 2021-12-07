@@ -2,7 +2,9 @@
     <body>
         <h1>Frequently Asked Questions</h1>
         
+        <div class=question>
 
+        </div>
         <!-- START HERE -->
             <div>
                 <form>
@@ -45,16 +47,19 @@
                 <div id="response" class="response">
                     <ul class="all-responses" id="all-responses">
 
+                        <li class="question-block" id="advisor-appointment">"How do I make an appointment with my Advisor?"</li>
+                        <li class="answer-block" id="advisor-appointment-a">"The Computer Science Department Advising Office is a students primary source for information and assistance regarding: academic advising, registration, admission to the Computer Science Department, scholarships, general education and transfer credits. \n Office hours are Monday-Friday, 9:00 a.m. to 4:00 p.m. \n For an appointment (if you are a Student with an A#) press the 'Schedule an Appointment' button on the lefthand side. Otherwise call 435-797-0527, or e-mail cs.advising@usu.edu"</li>
+                    
+                        <li class="question-block" id="catalog-year">"What is a Catalog Year, and how do I find my Catalog Year?"</li>
+                        <li class="answer-block" id="catalog-year-a">"Students are answerable to the General Catalog in force when they enter the CS Pre-Professional Program.  To find your catalog year, you can ask your advisor, or you can look at your Degree Works."</li>
+                    
                     </ul>
                 </div> 
 
                 <script language="javascript" type="text/javascript">
-                    const questionFactory = (questionId, isDisplayed, question, answer, courseLevel, advising, financialAid, registration, graduation, research, application, acceptance, internship, other) => {
+                    const questionFactory = (questionId, courseLevel, advising, financialAid, registration, graduation, research, application, acceptance, internship, other) => {
                         return {
                             questionId: questionId,
-                            isDisplayed: isDisplayed,
-                            question: question,
-                            answer: answer,
                             courseLevel: courseLevel,
                             attributes: {
                                 "advising": advising,
@@ -72,48 +77,15 @@
 
 
 
-                    const advisorAppointments = questionFactory("advisor-appointment",false, "How do I make an appointment with my Advisor?", "The Computer Science Department Advising Office is a students primary source for information and assistance regarding: academic advising, registration, admission to the Computer Science Department, scholarships, general education and transfer credits. \n Office hours are Monday-Friday, 9:00 a.m. to 4:00 p.m. \n For an appointment (if you are a Student with an A#) press the 'Schedule an Appointment' button on the lefthand side. Otherwise call 435-797-0527, or e-mail cs.advising@usu.edu", "undergraduate", true, false, false, false, false, true, true, false, true);
-                    const catalogYear = questionFactory("catalog-year",false, "What is a Catalog Year, and how do I find my Catalog Year?", "Students are answerable to the General Catalog in force when they enter the CS Pre-Professional Program.  To find your catalog year, you can ask your advisor, or you can look at your Degree Works.", "undergraduate", true, false, true, true, false, true, true, false, true);
+                    const advisorAppointments = questionFactory("advisor-appointment", "undergraduate", true, false, false, false, false, true, true, false, true);
+                    const catalogYear = questionFactory("catalog-year", "undergraduate", true, false, true, true, false, true, true, false, true);
                     const arrayOfQuestions = [];
                     arrayOfQuestions.push(advisorAppointments);
                     arrayOfQuestions.push(catalogYear);
                     const questionTypes = ["advising", "financial-aid", "registration", "graduation", "research", "application", "acceptance", "internship", "other"];
                     
-                    function generateHTML () {
-                                                
-                        var currentQuestions = document.getElementById("all-responses");
-                        currentQuestions.innerHTML = "";
-                        
-
-                        var questionNumber = 1;
-                                                
-                        
-                        arrayOfQuestions.forEach(question => {
-                            var questionNode = document.createElement('LI');
-                            var questionText = document.createTextNode(question.question);
-                            questionNode.appendChild(questionText);
-                            questionNode.id = question.questionId;
-                            questionNode.className = "question-block";
-
-                            var answerNode = document.createElement("LI")
-                            var answerText = document.createTextNode(question.answer);
-                            answerNode.appendChild(answerText);
-                            answerNode.id = question.questionId + "-a";
-                            answerNode.className = "answer-block";
-
-                            document.getElementById("all-responses").appendChild(questionNode);
-                            document.getElementById("all-responses").appendChild(answerNode);
-                            questionNumber ++;
-                            question.isDisplayed = true;
-                            
-                        });
-                        
-                        
-                       
-                    }
 
                     function changeColor() {
-                        debugger;
                         arrayOfQuestions.forEach(question => {
                             questionTypes.every (type => {
                                     if (document.getElementById(type).checked && question.attributes[type]) {
@@ -128,10 +100,8 @@
                             });
                         });
                     }
-                    window.onload = generateHTML();
                     
                     document.getElementById("submit").addEventListener("click", changeColor);
-                </script>
                 </script>
 
                 <style>
